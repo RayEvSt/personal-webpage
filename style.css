@@ -5,12 +5,54 @@
 
 /* Sets the minimum height of the body element to 100% of the viewport height, increases the line height for better legibility, and changes the font family to a system font stack. */
 body {
+  background-color: #fff7e7;
+  width: 100%;
   min-height: 100vh;
   line-height: 1.5;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+h1 {
+  color: #510d34;
+  font-size: 60px;
+  padding-left: 2%;
+}
+
+h2 {
+  color: #a63446;   #a63446
+  font-size: 30px;
+}
+
+h3 {
+  color: #d06a43;
+}
+
+p {
+  color: #7e1946;
+}
+
+li {
+  color: #7e1946;
+}
+
+.collapsible {
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 1px solid rgba(0,0,0,0);
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  background-color: rgba(0,0,0,0);
+}
+
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
 /* Reduces the line height of heading elements and wraps their text in a way that best balances the number of characters on each line, enhancing layout quality and legibility. */
 h1,
 h2,
@@ -22,19 +64,249 @@ h6 {
   text-wrap: balance;
 }
 
-/* Makes sure that images can't break outside their parent element. Their maximum width is 100% of their parent element's width. */
+main {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+main img{
+  border: 7px solid #d06a43;
+  border-radius: 5%;
+  outline: 7px solid #f9a03f;
+}
+
+main h2 {
+  padding-left: 2%;
+}
+
+.outerborder {
+  background-color: #d06a43;
+  width: 50px;
+}
+
+.innerborder {
+  background-color: #f9a03f;
+}
+
+
+
+/* home */
+
+/* image and intro paragraph */
+.landingcontent > :nth-child(1){
+  display: flex;
+  padding-bottom: 20px;
+  justify-content: flex-start;
+  padding-left: 2%;
+}
+
+.landingcontent img {
+  width: 30%;
+  min-width: 200px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+#intro {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+#intro p {
+  padding-left: 20px;
+}
+
+.landingcontent > :nth-child(2){
+  display: flex;
+  padding-bottom: 20px;
+  justify-content: space-between;
+  padding-left: 2%;
+}
+
+.landingcontent div article {
+  padding-bottom: 5px;
+  width: 50%;
+}
+
+.landingcontent div article p {
+  padding-left: 3%;
+}
+
+
+/* bio */
+.bio {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 70px;
+}
+
+.bio img {
+  width: 100%;
+  min-width: 200px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+
+.interestsandskills {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.interestsandskills > :nth-of-type(2n+1) {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 40px;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.interestsandskills > :nth-of-type(2n+2) {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  padding-bottom: 40px;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.interestsandskills article {
+  padding-left: 3%;
+  padding-right: 30px;
+}
+
+.interestsandskills img{
+  width: 400px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* experience */
+/* This already looks exactly how I want it to, seems like unneeded extra code to change it further? */
+.experience {
+  border: 7px solid #d06a43;
+  border-radius: 1%;
+  outline: 7px solid #f9a03f;
+}
+
+.classname {
+  padding-bottom: 30px;
+}
+
+/* portfolio */
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects img {
+  aspect-ratio: 1 /1;
+  object-fit: cover;
+}
+
+.projects p {
+  padding-left: 5%;
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.projects > div {
+  width: 30%;
+}
+
+.projects p {
+
+}
+
+
+
+
+/* Makes sure that images can't break outside their parent element. Their maximum width is 100% of their parent element's width. 
 img {
   max-width: 100%;
+}
+*/
+
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  max-height: 120px;
+}
+
+#navicon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-height: 120px;
+}
+
+.toddlerfaceactive {
+  background-color: #f9a03f;
+  max-width: 100px;
+  border: 5px none;
+  border-radius: 50px;
+  outline: 5px solid #fff7e7;
+}
+
+.toddlerface {
+  background-color: #fff7e7;
+  max-width: 100px;
+  border: 5px solid #d06a43;
+  border-radius: 50px;
+  outline: 5px solid #f9a03f;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  background-color: #A63446;
+  padding-left: 0px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.navlinks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
 }
 
 /* Removes the underline from the navigation links. */
 nav a {
+  font-size: 150%;
   text-decoration: none;
+  color: #fff7e7;
+  padding: 5px 20px;
 }
 
 /* Underlines the navigation links on hover. */
 nav a:hover {
   text-decoration: underline;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #A63446;
+  width: 100%;
+}
+
+footer p {
+  color:#fff7e7;
+  padding-right: 2%;
 }
 
 /* Underlines the active navigation link. */
